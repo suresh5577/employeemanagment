@@ -1,0 +1,38 @@
+<form method="post" action="#" novalidate>
+    {% csrf_token %}
+  
+    {{ form.non_field_errors }}
+  
+    {{ form.source.errors }}
+    {{ form.source }}
+  
+    <table border="1">
+  
+        <tr>
+          <th>{{ form.project_name.label_tag }}</th>
+          <td>
+            {{ form.project_name.errors }}
+            {{ form.project_name }}
+          </td>
+        </tr>
+
+        <tr>
+            <th>{{ form.client_name.label_tag }}</th>
+            <td>
+              {{ form.client_name.errors }}
+              {{ form.client_name }}
+            </td>
+          </tr>
+
+          <tr>
+            <th>{{ form.contact_person.label_tag }}</th>
+            <td>
+              {{ form.contact_person.errors }}
+              {{ form.contact_person }}
+            </td>
+          </tr>
+  
+    </table>
+  
+    <button type="submit">Submit</button>
+  </form>
