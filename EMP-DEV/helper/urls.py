@@ -1,7 +1,7 @@
-from django.conf.urls import url, include
+from django.urls import path
 from . import views
 
 
 urlpatterns = [
-    url(r'^send_email/', views.sendEmail, name="send_email")
+    path('send_email/', views.sendEmail, name="send_email")
 ]

@@ -87,24 +87,18 @@ WSGI_APPLICATION = 'emp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER' : 'postgres',
+        'PASSWORD' : 'nueve',
+        'HOST' : 'localhost',
+        'PORT' : '5432'
     }
 }
 
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'empdev_db',
-        'USER': 'shraddhasalaskar',
-        'PASSWORD': passwords.DATABASE_PASSWORD,
-        'HOST': 'localhost',
-        'PORT': 3306
-    }
-}
-'''
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Password validation
